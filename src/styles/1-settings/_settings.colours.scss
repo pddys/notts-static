@@ -1,0 +1,104 @@
+///* ========================================================================
+//   #COLOURS
+//   ======================================================================== */
+// The list of colour variables used globally across the project
+
+
+//
+// Project Colours as variables
+//
+
+/*$gold: #FBB03B; // Gold
+
+*/
+$gold: red;
+$blue: #01426A; // Lensic Blue
+$off-black: #1E1E1E; // Off Black
+$cool-grey: #D9D9D6; // Cool Grey
+
+$primary: #FBB03B; // Gold
+$secondary: #01426A; // Lensic Blue
+$tertiary: #54777B; // Off Black
+$highlight: #542537; // Cool Grey
+
+$teal: #006373;
+$light-teal: transparentize($teal, 0.85);
+$grey-light: #D8D8D8;
+$grey-med: #4B5358;
+$grey-dark: #232323;
+
+
+//
+// Project Colour as Array
+//
+$colors: (
+    primary: #000000,
+	secondary: #FFFFFF,
+	tertiary: #54777B,
+	highlight: #542537,
+    black: #000000,
+    white: #FFFFFF
+);
+
+//
+// Colour Helper Function
+//
+@function color($key) { // use e.g. color(navy) to refer to color hex values
+    @return map-get($colors, $key);
+}
+
+//
+// White/Black
+//
+$white: #ffffff;
+$black: #000000;
+
+//
+// Greys
+//
+$grey: #808080;
+$grey--lightest: #e6e6e6;
+$grey--lighter: #ECF0F1;
+$grey--light: #ECF0F1;
+$grey--dark: #4A4A4A;
+$grey--darker: #666666;
+$grey--darkest: #4d4d4d;
+
+//
+// Warnings
+//
+$warning: #D95B43;
+$error: #C02942;
+$success: #54777B;
+
+
+//
+// Social Colours
+//
+$twitter: #00aced;
+$facebook: #3b5998;
+$linkedin: #007bb6;
+$youtube: #bb0000;
+$tumblr: #32506d;
+$instagram: #517fa4;
+$vimeo: #aad450;
+$lastfm: #D51007;
+
+
+//
+// Background Colour Array
+//
+
+// use to apply complimentary text colours to each background
+// used in 7-utlities/colour-classes
+
+$backgrounds: (
+    white: (
+        background-color: color(white),
+        color: color(black)
+    ),
+    black: (
+        background-color: color(black),
+        color: color(white)
+    )
+);

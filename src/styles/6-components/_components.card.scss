@@ -1,0 +1,144 @@
+/* ==========================================================================
+   #CARDS
+   ========================================================================== */
+
+
+   /**
+    * Base styles for cards
+    */
+
+    .c-col-card {
+	}
+
+	.c-event-card {
+		width: 100%;
+		animation: .3s ease-in-out both fade-in;
+		&:hover {
+/*			box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px 0px;
+*/			transition: all 350ms ease-in;
+			.c-card__image {
+				filter: saturate(120%);
+				transition: all 150ms ease-in;
+			}
+		}
+
+		.c-event-card__title {
+			margin: 0;
+			font-weight: normal;
+			a {
+				text-decoration: none;
+			}
+		}
+		.c-event-card__genre {
+			font-weight: normal;
+			font-size: 90%;
+			opacity: 0.5;
+			margin: 0.5rem 0 0.25rem 0;
+		}
+
+		.c-event-card__details-container {
+			margin: 1em 0;
+			font-size: 90%;
+			i {
+				color: $teal;
+				margin-right: 0.5em;
+				width: 15px;
+				text-align: center;
+			}
+		}
+
+		.c-card__text {
+			margin: 0.5em 0;
+			flex-grow: 1;
+			p {
+				font-size: 90%;
+			}
+		}
+
+		.c-btn {
+			font-size: 90%;
+			margin: 1px 0;
+			i {
+				margin-right: 5px;
+			}
+		}
+
+		.c-instance__datetime {
+		    flex-grow: 1;
+			opacity: 0.5;
+		}
+	}
+
+	.c-event-card__time, .c-event-card__date {
+		font-weight: normal;
+		display: block;
+	}
+
+	.c-event-card__content {
+	    padding: 2% 0;
+	    width: 100%;
+	    display: flex;
+		flex-direction: column;
+	}
+
+	.c-event-card__btn-container {
+		display: flex;
+		justify-content: space-between;
+	    flex-wrap: wrap;
+	    align-items: center;
+	    font-size: 90%;
+	    .c-btn {
+	    	flex-basis: 40%;
+	    	min-width: 120px;
+	    }
+	}
+	.c-event-card__image-container {
+
+	}
+	.c-event-card__image {
+	  height: 0;
+	  overflow: hidden;
+	  padding-top: 75%;
+	  background: white;
+	  position: relative;
+	  margin-bottom: 0;
+  		img {
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 100%;
+		}
+	}
+
+
+	.c-card {
+		@extend .c-event-card;
+		background-color: white;
+		.c-card__title {
+			display: inline-block;
+			margin: 0 $inuit-global-spacing-unit-tiny;
+			padding: calc(#{$inuit-global-spacing-unit-tiny} / 2) $inuit-global-spacing-unit-small;
+			background-color: $teal;
+			color: $white;
+			transform: translateY(-75%);
+			border: 2px solid white;
+		}
+		.c-card__text {
+			margin: 0 0;
+			padding: 0 $inuit-global-spacing-unit-tiny;
+			p {
+				margin: 0;
+			}
+		}
+		.c-card__btn-container {
+			display: flex;
+			justify-content: flex-end;
+			transform: translateY(50%);
+			button {
+				margin-right: $inuit-global-spacing-unit-tiny;
+				background-color: white;
+			}
+		}
+	}
+    

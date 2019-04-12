@@ -1,7 +1,11 @@
 {% extends 'layouts/default.html' %}
 
+{% include 'partials/masthead.html' %}
+
 {% block content %}
 
-  <main class="main" role="main">(home - content)</main>
+	<main class="main" role="main">
+		{% include 'partials/card-container.html' %}
+	</main>
 
 {% endblock %}

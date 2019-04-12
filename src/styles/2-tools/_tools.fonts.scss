@@ -1,0 +1,47 @@
+/* ==========================================================================
+   #Fonts
+   ========================================================================== */
+
+
+// Font Face
+@mixin fonts {
+    font-family: 'museo-sans', 'garamond-premier-pro', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased !important;
+    text-rendering: optimizeLegibility !important;
+}
+
+@mixin font-thin {
+    font-weight: 100;
+}
+@mixin font-light {
+    font-weight: 300;
+}
+@mixin font-reg {
+    font-weight: 400;
+}
+@mixin font-med {
+    font-weight: 500;
+}
+@mixin font-semi-bold {
+    font-weight: 600;
+}
+@mixin font-bold {
+    font-weight: 700;
+}
+@mixin font-italic {
+    font-style: italic;
+}
+
+@mixin ff-serif {
+    font-family: "garamond-premier-pro",serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin ff-sans-serif {
+    font-family: "museo-sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}

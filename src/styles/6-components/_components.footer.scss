@@ -1,0 +1,99 @@
+.page {
+/*	margin-bottom: 40vh;
+	position: relative;*/
+}
+
+.c-footer {
+/*	position: fixed;
+	z-index: -1;
+	bottom: 0;*/
+	
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+
+    border-top: 1px solid $white;
+	color: $white;
+	background-color: $blue;
+	background: url(../media/lensic-footer-bg.jpg);
+	@include bgd-cover;
+
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	h5 {
+		@include ff-serif;
+		margin: 1em 0 0.25em 0;
+		font-size: 125%;
+	}
+}
+
+.c-footer__container {
+	flex: 1 0 50%;
+	justify-content: space-between;
+	flex-direction: column;
+	display: flex;
+}
+
+.c-footer__contact {
+	order: 0;
+	@include mq($from: mobile) {
+
+	}
+}
+
+.c-footer__social {
+	margin: 1em 0;
+	font-size: 150%;
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    a {
+    	opacity: 0.5;
+    	&:hover {
+	    	opacity: 0.85;
+	    }
+    }
+}
+
+.c-footer__nav {
+	margin-top: 2em;
+	text-align: right;
+	a {
+		display: block;
+		text-decoration: none;
+		@include font-bold;
+		&:hover {
+
+		}
+	}
+}
+
+.c-footer__charity-nav {
+	filter: grayscale(1);
+	max-width: 100px;
+}
+
+.c-footer__logos {
+	display: flex;
+	justify-content: space-between;
+	margin-left: auto;
+	flex-direction: column;
+	align-items: flex-end;
+	max-width: 100px;
+	@include mq($from: mobile) {
+		flex-direction: row;
+		flex-wrap: wrap;
+		max-width: calc(320px + 1em);
+	}
+	img {
+		margin-top: 1em;
+		filter: grayscale(1);
+		@include mq($from: mobile) {
+			flex-basis: calc(50% - 1em);
+		    max-width: 150px;
+		}
+	}
+}

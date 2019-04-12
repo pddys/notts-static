@@ -1,0 +1,68 @@
+/* ==========================================================================
+   #CONTAINER
+   ========================================================================== */
+
+/**
+ * Base styles for containers
+ */
+
+.c-container {
+    .o-layout {
+        padding-bottom: 5%;
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+}
+
+.c-container--inset {
+    width: 90%;
+    margin: 0 auto;
+
+    @include mq($from: wide) {
+        max-width: $wide;
+    }
+}
+
+.c-container--flush {
+    .c-content-wrap {
+        padding: 0;
+    }
+}
+
+.c-container--inset-content {
+
+    .c-content-wrap {
+        width: 90%;
+        margin: 0 auto;
+        padding: 3% 0;
+    }
+
+    @include mq($from: wide) {
+        .c-content-wrap {
+            max-width: $wide;
+        }
+    }
+}
+
+.c-container--has-bg-colour {
+    padding: 5%;
+}
+
+.c-container--has-bg-image {
+    padding: 5%;
+}
+
+/**
+ * Base styles for container fonts
+ */
+
+.c-container-title {
+    margin-bottom: 20px;
+    color: $teal;
+}
+
+.c-container-subtitle {
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
