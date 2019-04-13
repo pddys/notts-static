@@ -10,9 +10,16 @@
     .c-text-area {
     	&--has-bg {
     		padding: 24px 16px;
-    		p {
-    		}
     	}
+		p {
+			font-size: 16px;
+			@include mq($from: tablet) {
+				font-size: 110%;
+			}
+			@include mq($from: desktop) {
+				font-size: 125%;
+			}
+		}
     }
 
 

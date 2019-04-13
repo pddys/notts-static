@@ -56,20 +56,23 @@
 .c-masthead__details {
     background-color: $grey-med;
     padding: 12px 5%;
-    border-top: 6px solid white;
+    border-top: 3px solid white;
 }
 
 .c-masthead__title {
     font-size: 36px;
     color: $white;
+    margin-bottom: 1rem;
 }
 
 .c-masthead__date {
     color: $white;
+    margin-bottom: 1rem;
 }
 
 .c-masthead__genre {
     color: transparentize(white, 0.5);
+    margin-bottom: 0
 }
 
 .c-masthead__bar {

@@ -27,26 +27,6 @@
     </div>
   </section>
 
-  <section class="c-container">
-  	<div class="c-content-wrap">
-  		<h2 class="c-container-title">You Might Also Like</h2>
-  		<div class="c-container-content">
-  			<div class="o-layout">
-  				<div class="o-layout__item  u-1/3@tablet">
-  					{% include 'partials/event-card.html' %}
-  				</div>
-  				<div class="o-layout__item  u-1/3@tablet">
-  					{% include 'partials/event-card.html' %}
-  				</div>
-  				<div class="o-layout__item  u-1/3@tablet">
-  					{% include 'partials/event-card.html' %}
-  				</div>
-	  		</div>
-  		</div>
-
-  	</div>
-  </section>
-
   <section class="c-container u-bg--light-teal">
     <div class="c-content-wrap">
       <h2 class="c-container-title">Your Visit</h2>
@@ -65,6 +45,45 @@
       </div>
 
     </div>
+  </section>
+
+  <section class="c-container">
+    <div class="c-content-wrap">
+    <h2 class="c-container-title">Nottingham Classics</h2>
+      <div class="c-container-content">
+        <div class="o-layout">
+          <div class="o-layout__item  u-1/2@tablet">
+            <div class="c-text-area">
+              <p  style=" text-indent: 2em; ">Each year we bring the world's greatest orchestras, conductors and soloists to the city to perform a rich programme of classics, concertos and orchestral showpieces. The Royal Concert Hall has an incredible acoustic quality, so if you've never heard a live orchestra before then the Royal Concert Hall is a great place to start.</p>
+              <button class="c-btn c-btn--teal">Find Out More</button>
+            </div>
+          </div>
+          <div class="o-layout__item  u-1/2@tablet">
+            <img src="https://source.unsplash.com/random/800x600">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="c-container ">
+  	<div class="c-content-wrap">
+  		<h2 class="c-container-title">You Might Also Like</h2>
+  		<div class="c-container-content">
+  			<div class="o-layout">
+  				<div class="o-layout__item  u-1/3@tablet">
+  					{% include 'partials/event-card.html' %}
+  				</div>
+  				<div class="o-layout__item  u-1/3@tablet">
+  					{% include 'partials/event-card.html' %}
+  				</div>
+  				<div class="o-layout__item  u-1/3@tablet">
+  					{% include 'partials/event-card.html' %}
+  				</div>
+	  		</div>
+  		</div>
+
+  	</div>
   </section>
 
 {%- endblock -%}

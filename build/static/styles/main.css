@@ -11223,6 +11223,7 @@ button[type="submit"]:disabled, button[type="button"]:disabled, button[type="res
  * http://csswizardry.com/2016/02/managing-typography-on-large-apps/).
  */
 h1, h2, h3, h4, h5, h6 {
+  font-family: 'sofia-pro';
   color: inherit;
   margin-bottom: 1em;
 }
@@ -12340,6 +12341,22 @@ img {
   padding: 24px 16px;
 }
 
+.c-text-area p {
+  font-size: 16px;
+}
+
+@media (min-width: 48em) {
+  .c-text-area p {
+    font-size: 110%;
+  }
+}
+
+@media (min-width: 64em) {
+  .c-text-area p {
+    font-size: 125%;
+  }
+}
+
 /* ==========================================================================
    #IMAGE
    ========================================================================== */
@@ -13245,20 +13262,23 @@ button.c-hamburger {
 .c-masthead__details {
   background-color: #4B5358;
   padding: 12px 5%;
-  border-top: 6px solid white;
+  border-top: 3px solid white;
 }
 
 .c-masthead__title {
   font-size: 36px;
   color: #ffffff;
+  margin-bottom: 1rem;
 }
 
 .c-masthead__date {
   color: #ffffff;
+  margin-bottom: 1rem;
 }
 
 .c-masthead__genre {
   color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 0;
 }
 
 .c-masthead__bar {

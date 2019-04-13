@@ -11,6 +11,7 @@ import jQuery from 'jquery';
 	const navigationTag = $('.c-nav')
 	const bodyTag = $('body')
 
+
 	navTrigger.on("click", function(e) {
 		navTrigger.toggleClass('is-active')
 		navigationTag.toggleClass('is-active')
@@ -28,6 +29,17 @@ import jQuery from 'jquery';
 		secNavigationBG.toggleClass('is-active')
 		bodyTag.toggleClass('tertiary-menu-open')
 	})
+
+	const typefaceSelect = document.querySelector(`select[name="typeface"]`)
+	const headingSelect = document.querySelector(`select[name="headings"]`)
+	const outputTag = document.querySelector('body')
+	const headingTag = document.querySelectorAll('h1, h2, h3, h4, h5, h6')
+	typefaceSelect.addEventListener('input', function() {
+	  outputTag.style.fontFamily = this.value
+	})
+	// headingSelect.addEventListener('input', function() {
+	//   headingTag.style.fontFamily = this.value
+	// })
 
 
 
