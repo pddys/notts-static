@@ -11,6 +11,14 @@ import jQuery from 'jquery';
 	const navigationTag = $('.c-nav')
 	const bodyTag = $('body')
 
+	const hamburgerTag = $('.c-hamburger')
+
+	hamburgerTag.on("click", function(e) {
+		hamburgerTag.toggleClass('is-active')
+		navigationTag.toggleClass('is-active')
+		bodyTag.toggleClass('menu-open')
+	})
+
 
 	navTrigger.on("click", function(e) {
 		navTrigger.toggleClass('is-active')

@@ -12372,7 +12372,6 @@ img {
 
 .c-header {
   background-color: rgba(255, 255, 255, 0.9);
-  color: green;
   width: 100%;
   padding: 6px 5%;
   display: -webkit-box;
@@ -12385,6 +12384,15 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (min-width: 48em) {
+  .c-header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .c-header__container {
@@ -12446,14 +12454,23 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
   margin: 0;
+}
+
+@media (min-width: 48em) {
+  .c-header-nav ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .c-header-nav li {
@@ -12514,23 +12531,65 @@ img {
 }
 
 .c-nav__container {
+  height: 100vh;
+  width: 100%;
+  display: none;
+  background-color: rgba(0, 99, 115, 0.9);
+}
+
+@media (min-width: 48em) {
+  .c-nav__container {
+    background-color: transparent;
+    height: auto;
+    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 6px 0;
+  }
+}
+
+.menu-open .c-nav__container {
+  position: absolute;
+  top: 50px;
+  z-index: 1000;
+  left: 0;
+  padding-top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 6px 0;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@media (min-width: 37.5em) {
+  .menu-open .c-nav__container {
+    top: 65px;
+  }
 }
 
 .c-header-nav--primary {
   font-size: 20px;
-  color: #494a4a;
+  color: #ffffff;
   font-weight: bold;
+}
+
+@media (min-width: 48em) {
+  .c-header-nav--primary {
+    color: #494a4a;
+  }
 }
 
 .c-header-nav--primary li {
@@ -12551,17 +12610,32 @@ img {
   transition: all 350ms ease;
 }
 
+@media (max-width: 47.99em) {
+  .c-header-nav--primary ul {
+    text-align: right;
+  }
+}
+
+@media (max-width: 47.99em) {
+  .c-header-nav__secondary-icons ul {
+    display: none;
+  }
+}
+
+@media (max-width: 47.99em) {
+  .c-header-nav__secondary-links {
+    width: 100%;
+    text-align: right;
+  }
+}
+
 .c-tertiary-nav {
-  position: absolute;
-  right: 0;
   text-align: right;
 }
 
 .c-tertiary-nav ul {
+  text-align: right;
   padding: 5% 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -12583,10 +12657,28 @@ img {
   display: block;
 }
 
+@media (min-width: 48em) {
+  .c-tertiary-nav {
+    position: absolute;
+    right: 0;
+  }
+  .c-tertiary-nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .c-header-nav--secondary {
   font-size: 12px;
-  color: #494a4a;
   font-weight: normal;
+  color: #ffffff;
+}
+
+@media (min-width: 48em) {
+  .c-header-nav--secondary {
+    color: #494a4a;
+  }
 }
 
 .c-header-nav--secondary nav {
@@ -12672,6 +12764,7 @@ img {
 }
 
 .c-tertiary-nav__bg {
+  display: none;
   width: 100vw;
   background-color: #006373;
   height: 50%;
@@ -12682,6 +12775,12 @@ img {
   transition: -webkit-transform 350ms ease;
   transition: transform 350ms ease;
   transition: transform 350ms ease, -webkit-transform 350ms ease;
+}
+
+@media (min-width: 48em) {
+  .c-tertiary-nav__bg {
+    display: block;
+  }
 }
 
 .c-tertiary-nav__bg.is-active {
@@ -12758,6 +12857,8 @@ body.menu-open .c-hamburger__label--close {
 button.c-hamburger {
   margin: 0;
   height: 30px;
+  position: absolute;
+  right: 0;
 }
 
 .c-hamburger {
@@ -12781,6 +12882,14 @@ button.c-hamburger {
   border: 0;
   margin: 0;
   overflow: visible;
+  position: absolute;
+  right: 0;
+}
+
+@media (min-width: 48em) {
+  .c-hamburger {
+    display: none;
+  }
 }
 
 .c-hamburger:hover {
@@ -12794,7 +12903,7 @@ button.c-hamburger {
 .c-hamburger.is-active .c-hamburger-inner,
 .c-hamburger.is-active .c-hamburger-inner::before,
 .c-hamburger.is-active .c-hamburger-inner::after {
-  background-color: #fff;
+  background-color: #006373;
 }
 
 .c-hamburger-box {
@@ -12813,7 +12922,7 @@ button.c-hamburger {
 .c-hamburger-inner, .c-hamburger-inner::before, .c-hamburger-inner::after {
   width: 30px;
   height: 2px;
-  background-color: #fff;
+  background-color: #006373;
   position: absolute;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
@@ -12838,49 +12947,52 @@ button.c-hamburger {
   bottom: -8px;
 }
 
-.c-hamburger--spin .c-hamburger-inner {
-  -webkit-transition-duration: 350ms;
-          transition-duration: 350ms;
+/*
+   * Squeeze
+   */
+.c-hamburger--squeeze .c-hamburger-inner {
+  -webkit-transition-duration: 0.075s;
+          transition-duration: 0.075s;
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
-.c-hamburger--spin .c-hamburger-inner::before {
-  -webkit-transition: top 0.1s 350ms ease-in, opacity 0.1s ease-in;
-  transition: top 0.1s 350ms ease-in, opacity 0.1s ease-in;
+.c-hamburger--squeeze .c-hamburger-inner::before {
+  -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+  transition: top 0.075s 0.12s ease, opacity 0.075s ease;
 }
 
-.c-hamburger--spin .c-hamburger-inner::after {
-  -webkit-transition: bottom 0.1s 350ms ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  transition: bottom 0.1s 350ms ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  transition: bottom 0.1s 350ms ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  transition: bottom 0.1s 350ms ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+.c-hamburger--squeeze .c-hamburger-inner::after {
+  -webkit-transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
-.c-hamburger--spin.is-active .c-hamburger-inner {
-  -webkit-transform: rotate(225deg);
-          transform: rotate(225deg);
+.c-hamburger--squeeze.is-active .c-hamburger-inner {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
   -webkit-transition-delay: 0.12s;
           transition-delay: 0.12s;
   -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
           transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.c-hamburger--spin.is-active .c-hamburger-inner::before {
+.c-hamburger--squeeze.is-active .c-hamburger-inner::before {
   top: 0;
   opacity: 0;
-  -webkit-transition: top 0.1s ease-out, opacity 350ms 0.12s ease-out;
-  transition: top 0.1s ease-out, opacity 350ms 0.12s ease-out;
+  -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+  transition: top 0.075s ease, opacity 0.075s 0.12s ease;
 }
 
-.c-hamburger--spin.is-active .c-hamburger-inner::after {
+.c-hamburger--squeeze.is-active .c-hamburger-inner::after {
   bottom: 0;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
-  -webkit-transition: bottom 0.1s ease-out, -webkit-transform 350ms 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: bottom 0.1s ease-out, -webkit-transform 350ms 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: bottom 0.1s ease-out, transform 350ms 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: bottom 0.1s ease-out, transform 350ms 0.12s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 350ms 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -webkit-transition: bottom 0.075s ease, -webkit-transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.075s ease, -webkit-transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .page {
@@ -13300,7 +13412,7 @@ button.c-hamburger {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9999;
+  z-index: 999;
 }
 
 .c-masthead__bar button i {
