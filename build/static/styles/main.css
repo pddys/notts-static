@@ -11334,6 +11334,7 @@ table td {
 
 table th {
   font-weight: 700;
+  font-family: 'sofia-pro';
   text-align: left;
   padding: 14px 10px;
   vertical-align: center;
@@ -11450,7 +11451,6 @@ html {
   /* [2] */
   min-height: 100%;
   /* [3] */
-  font-family: 'museo-sans', 'garamond-premier-pro', sans-serif;
   font-weight: normal;
   font-style: normal;
   -webkit-font-smoothing: antialiased !important;
@@ -12060,6 +12060,7 @@ img {
   border: 2px solid #006373;
   font-size: 90%;
   font-weight: 600;
+  font-family: 'sofia-pro';
 }
 
 /* Style variants
@@ -12593,6 +12594,8 @@ img {
 }
 
 .c-header-nav--primary li {
+  font-weight: 600;
+  font-family: 'sofia-pro';
   text-transform: uppercase;
   margin: 0 0.75rem 0 0.5rem;
 }
@@ -13084,6 +13087,7 @@ button.c-hamburger {
   display: block;
   text-decoration: none;
   font-weight: 700;
+  font-family: 'sofia-pro';
 }
 
 .c-footer__charity-nav {

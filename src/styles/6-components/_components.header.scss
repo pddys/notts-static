@@ -129,6 +129,7 @@ $header_height: 75px;
 		color: #494a4a;
 	}
 	li {
+		@include font-semi-bold;
 		text-transform: uppercase;
 	    margin: 0 0.75rem 0 0.5rem;
 	    &:hover {
