@@ -47,18 +47,70 @@ import jQuery from 'jquery';
 	const typefaceSelect = document.querySelector(`select[name="typeface"]`)
 	const headingSelect = document.querySelector(`select[name="headings"]`)
 	const outputTag = document.querySelector('body')
-	const headingTag = document.querySelectorAll('h1, h2, h3, h4, h5, h6')
+	const headingTag = $('.font-heading')
 	typefaceSelect.addEventListener('input', function() {
 	  outputTag.style.fontFamily = this.value
 	})
-	// headingSelect.addEventListener('input', function() {
-	//   headingTag.style.fontFamily = this.value
-	// })
+	headingSelect.addEventListener('input', function() {
+	  headingTag.style.fontFamily = this.value
+	})
 
+	//Random Data
 
+	const titleTag = document.querySelector('.js__title')
+	const dateTag = document.querySelector('.js__date')
+	const timeTag = document.querySelector('.js__time')
+
+	let eventSource = dataNotts
+	let eventNumber = 0
+
+	const dataNotts = [
+		{
+			title: "Rough Crossing",
+			date: "15 Apr - 20 Apr 2019",
+			time: '7:00pm'
+		},
+		{
+			title: "National Youth Choir of Great Britain and National Youth Boys' Choir of Great Britain",
+			date: "15 Apr 2019",
+			time: '7:30pm'
+		},
+		{
+			title: "Spark Sensory Baby Sessions",
+			date: "16 Apr 2019",
+			time: '2:00pm'
+		},
+		{
+			title: "Back to the Future In Concert",
+			date: "17 Apr 2019",
+			time: '8:00pm'
+		},
+		{
+			title: "City of Birmingham Symphony Orchestra",
+			date: "03 May 2019",
+			time: '8:15pm'
+		}
+	]
+
+	$('html').find('.js__title').each(function() {
+		var eventNumber = Math.floor(Math.random() * dataNotts.length)
+		var that = $(this);
+		that.html(dataNotts[eventNumber].title);
+	})
+	$('html').find('.js__date').each(function() {
+		var eventNumber = Math.floor(Math.random() * dataNotts.length)
+		var that = $(this);
+		that.html(dataNotts[eventNumber].date);
+	})
+	$('html').find('.js__time').each(function() {
+		var eventNumber = Math.floor(Math.random() * dataNotts.length)
+		var that = $(this);
+		that.html(dataNotts[eventNumber].time);
+	})
+})
 
 
   // END JQUERY.
-})(jQuery);
+(jQuery);
 
 console.log('main.js works!');
