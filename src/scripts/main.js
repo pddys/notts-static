@@ -26,16 +26,22 @@ import jQuery from 'jquery';
 		bodyTag.toggleClass('menu-open')
 	})
 
-	const secNavTrigger = $('#js-tertiary-nav--trigger')
+	const secNavTrigger = $('.js-tertiary-nav--trigger')
 	const secNavigationTag = $('.c-tertiary-nav')
 	const secNavigationBG = $('.c-tertiary-nav__bg')
 
 	secNavTrigger.on("click", function(e) {
 		e.preventDefault();
 		secNavTrigger.toggleClass('is-active')
-		$(this).parents('li').toggleClass('is-active')
-		secNavigationBG.toggleClass('is-active')
-		bodyTag.toggleClass('tertiary-menu-open')
+		$(this).parents('li').toggleClass('is-active').siblings().removeClass('is-active');
+		if ($(this).parents('.is-active').length) {
+			secNavigationBG.addClass('is-active')
+			bodyTag.addClass('tertiary-menu-open')
+		} else {
+			secNavigationBG.removeClass('is-active')
+			bodyTag.removeClass('tertiary-menu-open')
+		}
+		// Will need to remove siblings active class
 	})
 
 	const typefaceSelect = document.querySelector(`select[name="typeface"]`)

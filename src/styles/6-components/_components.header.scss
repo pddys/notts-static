@@ -277,13 +277,13 @@ $header_height: 75px;
 	}
 	width: 100vw;
 	background-color: $teal;
-	height: 50%;
+	height: 450px;
 	position: absolute;
-	top: -50vh;
+	top: -450px;
 	left: 0;
 	transition: transform 350ms ease;
 	&.is-active {
-		transform: translate(0, 50vh);
+		transform: translate(0, 450px);
 		transition: transform 350ms ease;
 	}
 }

@@ -12767,9 +12767,9 @@ img {
   display: none;
   width: 100vw;
   background-color: #006373;
-  height: 50%;
+  height: 450px;
   position: absolute;
-  top: -50vh;
+  top: -450px;
   left: 0;
   -webkit-transition: -webkit-transform 350ms ease;
   transition: -webkit-transform 350ms ease;
@@ -12784,8 +12784,8 @@ img {
 }
 
 .c-tertiary-nav__bg.is-active {
-  -webkit-transform: translate(0, 50vh);
-          transform: translate(0, 50vh);
+  -webkit-transform: translate(0, 450px);
+          transform: translate(0, 450px);
   -webkit-transition: -webkit-transform 350ms ease;
   transition: -webkit-transform 350ms ease;
   transition: transform 350ms ease;
