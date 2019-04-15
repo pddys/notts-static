@@ -22,4 +22,16 @@
 		}
     }
 
+    .c-information {
+      h5 {
+        color: $teal;
+      }
+      span {
+        display: block;
+        text-transform: uppercase;
+        opacity: 0.4;
+        font-size: 90%;
+      }
+    }
+
 

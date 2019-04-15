@@ -11451,6 +11451,7 @@ html {
   /* [2] */
   min-height: 100%;
   /* [3] */
+  font-family: 'sofia-pro', sans-serif;
   font-weight: normal;
   font-style: normal;
   -webkit-font-smoothing: antialiased !important;
@@ -12357,6 +12358,17 @@ img {
   .c-text-area p {
     font-size: 125%;
   }
+}
+
+.c-information h5 {
+  color: #006373;
+}
+
+.c-information span {
+  display: block;
+  text-transform: uppercase;
+  opacity: 0.4;
+  font-size: 90%;
 }
 
 /* ==========================================================================

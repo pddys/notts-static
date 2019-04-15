@@ -47,12 +47,14 @@ import jQuery from 'jquery';
 	const typefaceSelect = document.querySelector(`select[name="typeface"]`)
 	const headingSelect = document.querySelector(`select[name="headings"]`)
 	const outputTag = document.querySelector('body')
-	const headingTag = $('.font-heading')
+	const headingTags = document.querySelectorAll('.font-heading')
 	typefaceSelect.addEventListener('input', function() {
 	  outputTag.style.fontFamily = this.value
 	})
 	headingSelect.addEventListener('input', function() {
-	  headingTag.style.fontFamily = this.value
+		headingTags.forEach(tag => {
+			tag.style.fontFamily = this.value
+		})
 	})
 
 	//Random Data

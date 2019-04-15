@@ -141,15 +141,15 @@
       <div class="c-container-content">
         <div class="o-layout">
           <div class="o-layout__item  u-1/3@tablet">
-            <div class="c-text-area c-text-area--has-bg u-bg--light-grey">
-              <h5>Venue</h5>
-              <p>Theatre Royal</p>
-              <h5>Duration</h5>
-              <p>1 hour 40 mins</p>
-              <h5>Important Information</h5>
-              <p>Lorem ipsum dolor sit amet</p>
-              <h5>Accessibility Information</h5>
-              <p>Lorem ipsum dolor sit amet</p>
+            <div class="c-text-area c-information c-text-area--has-bg u-bg--light-grey">
+              <span>Venue</span>
+              <h5>Theatre Royal</h5>
+              <span>Duration</span>
+              <h5>1 hour 40 mins</h5>
+              <span>Important Information</span>
+              <h5>Lorem ipsum dolor sit amet</h5>
+              <span>Accessibility Information</span>
+              <h5>Lorem ipsum dolor sit amet</h5>
             </div>
           </div>
           <div class="o-layout__item  u-2/3@tablet">
@@ -173,7 +173,7 @@
 
   <section class="c-container u-bg--light-teal">
     <div class="c-content-wrap">
-      <h2 class="c-container-title">Your Visit</h2>
+      <h2 class="c-container-title font-heading">Your Visit</h2>
       <div class="c-container-content">
         <div class="o-layout">
           <div class="o-layout__item  u-1/3@tablet">
@@ -184,7 +184,7 @@
 		</figure>
 	</div>
 	<div class="c-card__content">
-		<h4 class="c-card__title"><a>Test Card</a></h4>
+		<h4 class="c-card__title font-heading"><a>Test Card</a></h4>
 		<div class ="c-card__text">
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 		</div>
@@ -202,7 +202,7 @@
 		</figure>
 	</div>
 	<div class="c-card__content">
-		<h4 class="c-card__title"><a>Test Card</a></h4>
+		<h4 class="c-card__title font-heading"><a>Test Card</a></h4>
 		<div class ="c-card__text">
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 		</div>
@@ -220,7 +220,7 @@
 		</figure>
 	</div>
 	<div class="c-card__content">
-		<h4 class="c-card__title"><a>Test Card</a></h4>
+		<h4 class="c-card__title font-heading"><a>Test Card</a></h4>
 		<div class ="c-card__text">
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 		</div>
@@ -238,7 +238,7 @@
 
   <section class="c-container">
     <div class="c-content-wrap">
-    <h2 class="c-container-title">Nottingham Classics</h2>
+    <h2 class="c-container-title font-heading">Nottingham Classics</h2>
       <div class="c-container-content">
         <div class="o-layout">
           <div class="o-layout__item  u-1/2@tablet">
@@ -257,7 +257,7 @@
 
   <section class="c-container ">
   	<div class="c-content-wrap">
-  		<h2 class="c-container-title">You Might Also Like</h2>
+  		<h2 class="c-container-title font-heading">You Might Also Like</h2>
   		<div class="c-container-content">
   			<div class="o-layout">
   				<div class="o-layout__item  u-1/3@tablet">
@@ -269,7 +269,7 @@
 	</div>
 	<div class="c-card__content">
 		<h5 class="c-event-card__genre">Genre</h5>
-		<h4 class="c-event-card__title font-heading js__title"><a>Test Card</a></h4>
+		<h4 class="c-event-card__title font-heading js__title"><a class="font-heading">Test Card</a></h4>
 		<div class="c-event-card__details-container">
 			<time class="c-event-card__date js__date"><i class="fas fa-calendar"></i>Date</time>
 			<span class="c-event-card__time js__time"><i class="fas fa-clock"></i>Time</span>
@@ -289,7 +289,7 @@
 	</div>
 	<div class="c-card__content">
 		<h5 class="c-event-card__genre">Genre</h5>
-		<h4 class="c-event-card__title font-heading js__title"><a>Test Card</a></h4>
+		<h4 class="c-event-card__title font-heading js__title"><a class="font-heading">Test Card</a></h4>
 		<div class="c-event-card__details-container">
 			<time class="c-event-card__date js__date"><i class="fas fa-calendar"></i>Date</time>
 			<span class="c-event-card__time js__time"><i class="fas fa-clock"></i>Time</span>
@@ -309,7 +309,7 @@
 	</div>
 	<div class="c-card__content">
 		<h5 class="c-event-card__genre">Genre</h5>
-		<h4 class="c-event-card__title font-heading js__title"><a>Test Card</a></h4>
+		<h4 class="c-event-card__title font-heading js__title"><a class="font-heading">Test Card</a></h4>
 		<div class="c-event-card__details-container">
 			<time class="c-event-card__date js__date"><i class="fas fa-calendar"></i>Date</time>
 			<span class="c-event-card__time js__time"><i class="fas fa-clock"></i>Time</span>
@@ -332,7 +332,7 @@
       <div class="option">
 	    <label>Body copy</label>
 	    <select name="typeface">
-		<option value="sofia-pro">Default (Sofia)</option>
+		<option selected="selected" value="sofia-pro">Default (Sofia)</option>
 	      <option value="nimbus-sans">Nimbus Sans</option>
 	      <option value="open-sans">Open Sans</option>
   	      <option value="source-sans-pro">Source Sans</option>
@@ -348,8 +348,15 @@
 	    <label>Headings</label>
 	    <select name="headings">
 	      <option value="sofia-pro">Sofia</option>
+	      <option value="nimbus-sans">Nimbus Sans</option>
+	      <option value="open-sans">Open Sans</option>
+  	      <option value="source-sans-pro">Source Sans</option>
 	      <option value="haboro">Haboro</option>
 	      <option value="quattrocento">Quattrocento</option>
+	      <option value="sofia-pro">Sofia</option>
+	      <option value="Domine">Domine</option>
+	      <option value="ff-more-web-pro">FF More</option>
+	      <option value="ff-tisa-sans-web-pro">FF Tisa Sans</option>
 	    </select>
 	  </div>
   </footer><!-- /footer -->
