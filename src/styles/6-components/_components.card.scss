@@ -72,6 +72,15 @@
 	.c-event-card__time, .c-event-card__date {
 		font-weight: normal;
 		display: block;
+		span {
+			font-size: 110%;
+		}
+	}
+
+	.c-event-card__date {
+		span {
+			font-size: 120%;
+		}
 	}
 
 	.c-event-card__content {

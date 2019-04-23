@@ -76,7 +76,6 @@
 }
 
 .c-masthead__bar {
-    background-color: $grey-dark;
     padding: $inuit-global-spacing-unit-small 5%;
     display: flex;
     flex-direction: row;
@@ -87,9 +86,12 @@
     left: 0;
     right: 0;
     z-index: 999;
+
+    border: 2px solid $grey-dark;
+    border-width: 2px 0;
+    background-color: transparentize($white, 0.2);
     button {
         i {
-            color: white;
             margin-right: 0.5em;
         }
     }
@@ -98,7 +100,6 @@
 .c-subnav {
     display: flex;
     align-items: center;
-    color: white;
     ul {
         margin: 0;
         padding: 0;
