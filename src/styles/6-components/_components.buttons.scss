@@ -188,10 +188,6 @@ $btn-ghost-border-width: 2px;
   display: inline-block;
   position: relative;
   text-decoration: none;
-  i {
-    margin-left: 5px;
-    color: $gold;
-  }
 }
 .c-cta::before {
   content: '';
@@ -201,9 +197,21 @@ $btn-ghost-border-width: 2px;
   height: 2px;
   bottom: -2px;
   left: 0;
-  background-color: $gold;
+  background-color: $teal;
   transform-origin: bottom left;
   transition: transform 0.25s ease-out;
+}
+.c-cta::after {
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 500;
+        content: "\f0da";
+        margin-left: 0.5em;
+        color: $teal;
 }
 .c-cta:hover::before {
   transform: scaleX(0.90);
