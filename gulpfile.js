@@ -52,7 +52,7 @@ const paths = {
     dest: `${dirs.output}`,
   },
   media: {
-    src: `${dirs.entry}/media/**/*.+(gif|jpg|jpeg|png|svg)`,
+    src: `${dirs.entry}/media/**/*`,
     dest: `${dirs.output}/static/media`,
   },
   styles: {
