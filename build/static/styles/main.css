@@ -3050,7 +3050,7 @@ button.c-hamburger {
   font-size: 90%;
 }
 
-.c-event-card .c-event-card__details-container i, .c-card .c-event-card__details-container i {
+.c-event-card .c-event-card__details-container i, .c-card .c-event-card__details-container i, .c-event-card .c-event-card__details-container svg, .c-card .c-event-card__details-container svg {
   color: #006373;
   margin-right: 0.5em;
   width: 15px;

@@ -4,6 +4,9 @@ import { library, dom } from '@fortawesome/fontawesome-svg-core'
 
 // Solid
 import { faUser as fasUser } from '@fortawesome/pro-solid-svg-icons/faUser'
+import { faCalendar as fasCalendar } from '@fortawesome/pro-solid-svg-icons/faCalendar'
+import { faClock as fasClock } from '@fortawesome/pro-solid-svg-icons/faClock'
+
 
 // Regular
 import { faUser as farUser } from '@fortawesome/pro-regular-svg-icons/faUser'
@@ -26,7 +29,9 @@ import { faYoutube as fabYoutube } from '@fortawesome/free-brands-svg-icons/faYo
 // Add icons to library
 library.add(
   // Solid
-  fasUser,
+	fasUser,
+	fasCalendar,
+	fasClock,
 
   // Regular
   farUser,
