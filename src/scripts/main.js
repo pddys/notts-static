@@ -1,5 +1,56 @@
 import jQuery from 'jquery';
 
+import { library, dom } from '@fortawesome/fontawesome-svg-core'
+
+// Solid
+import { faUser as fasUser } from '@fortawesome/pro-solid-svg-icons/faUser'
+
+// Regular
+import { faUser as farUser } from '@fortawesome/pro-regular-svg-icons/faUser'
+import { faPhone as farPhone } from '@fortawesome/pro-regular-svg-icons/faPhone'
+import { faShoppingCart as farShoppingCart } from '@fortawesome/pro-regular-svg-icons/faShoppingCart'
+import { faCalendar as farCalendar } from '@fortawesome/pro-regular-svg-icons/faCalendar'
+import { faCaretRight as farCaretRight } from '@fortawesome/pro-regular-svg-icons/faCaretRight'
+import { faCaretDown as farCaretDown } from '@fortawesome/pro-regular-svg-icons/faCaretDown'
+import { faCaretUp as farCaretUp } from '@fortawesome/pro-regular-svg-icons/faCaretUp'
+import { faMapMarkerAlt as farMapMarkerAlt } from '@fortawesome/pro-regular-svg-icons/faMapMarkerAlt'
+import { faSearch as farSearch } from '@fortawesome/pro-regular-svg-icons/faSearch'
+import { faFilePdf as farFilePdf } from '@fortawesome/pro-regular-svg-icons/faFilePdf'
+
+// Brands
+import { faTwitter as fabTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter'
+import { faInstagram as fabInstagram } from '@fortawesome/free-brands-svg-icons/faInstagram'
+import { faFacebookF as fabFacebookF } from '@fortawesome/free-brands-svg-icons/faFacebookF'
+import { faYoutube as fabYoutube } from '@fortawesome/free-brands-svg-icons/faYoutube'
+
+// Add icons to library
+library.add(
+  // Solid
+  fasUser,
+
+  // Regular
+  farUser,
+  farShoppingCart,
+  farCalendar,
+  farPhone,
+  farCaretRight,
+  farCaretDown,
+  farCaretUp,
+  farMapMarkerAlt,
+  farSearch,
+  farFilePdf,
+
+  // Brands
+  fabTwitter,
+  fabInstagram,
+  fabFacebookF,
+  fabYoutube
+)
+
+// Replace any existing <i> tags with <svg> and set up a MutationObserver to
+// continue doing this as the DOM changes.
+dom.watch()
+
 (function($) {
   // START JQUERY.
 
