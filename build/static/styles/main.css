@@ -1815,7 +1815,7 @@ img {
   text-decoration: none;
 }
 
-.c-header__link i {
+.c-header__link i, .c-header__link svg {
   font-size: 20px;
 }
 
@@ -1860,7 +1860,7 @@ img {
   position: relative;
 }
 
-.c-header-nav li i {
+.c-header-nav li i, .c-header-nav li svg {
   color: #006373;
   margin-left: 0.5em;
 }

@@ -35,7 +35,7 @@ $header_height: 75px;
 .c-header__link {
 	text-align: center;
 	text-decoration: none;
-	i {
+	i, svg {
 		font-size: 20px;
 	}
 	label {
@@ -62,7 +62,7 @@ $header_height: 75px;
 		list-style-type: none;
 		margin: 0 0 0 0.5rem;
 		position: relative;
-		i {
+		i, svg {
 			color: $teal;
 			margin-left: 0.5em;
 		}
